@@ -124,7 +124,7 @@ export const parseMapfile = async (options) =>
 						}
 					}
 				}
-				else if (section && line[0] === ' ' && line[1] === '.')
+				else if (section && line[0] === ' ' && line[1] !== '*')
 				{
 					// check for one-line symbol definition with archive(object) info
 					const found = line.match(/^\s(\S+)\s+0x([0-9a-f]+)\s+0x([0-9a-f]+)\s+(\S+)\((\S+)\)$/);
