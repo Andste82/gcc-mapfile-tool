@@ -35,9 +35,9 @@ const main = async () =>
 
 	if (cli.format === 'html')
 	{
-		let template = await readFile('assets/index.html', 'utf8');
-		const css = await readFile('assets/datatables.min.css', 'utf8');
-		const js = await readFile('assets/datatables.min.js', 'utf8');
+		let template = await readFile('../assets/index.html', 'utf8');
+		const css = await readFile('../assets/datatables.min.css', 'utf8');
+		const js = await readFile('../assets/datatables.min.js', 'utf8');
 
 		template = template.replace("{{datatables-css}}", css);
 		template = template.replace("{{datatables-js}}", js);
