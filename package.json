@@ -1,12 +1,12 @@
 {
   "name": "gcc-mapfile-tool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mapfile tool for parsing GCC mapfiles",
   "repository": {
 	"type": "git",
 	"url": "https://github.com/Andste82/gcc-mapfile-tool.git"
   },
-  "main": "./src/index.js",
+  "main": "./src/index.mjs",
   "bin": {
     "gcc-mapfile-tool": "./src/cli.mjs"
   },
