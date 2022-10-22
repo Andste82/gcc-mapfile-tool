@@ -1,3 +1,6 @@
+#!/bin/sh
+":" //# comment; exec /usr/bin/env node --harmony "$0" "$@"
+
 import commandLineArgs from 'command-line-args';
 import { readFile, writeFile, stat } from 'node:fs/promises';
 import { parseMapfile } from './parseMapfile.mjs';
