@@ -5,6 +5,11 @@ import commandLineArgs from 'command-line-args';
 import { readFile, writeFile, stat } from 'node:fs/promises';
 import { parseMapfile } from './parseMapfile.mjs';
 
+import { fileURLToPath } from 'url'
+import { dirname } from 'path'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 const fileExists = async path => !!(await stat(path).catch(() => false))
 
 const main = async () =>
@@ -35,9 +40,9 @@ const main = async () =>
 
 	if (cli.format === 'html')
 	{
-		let template = await readFile('../assets/index.html', 'utf8');
-		const css = await readFile('../assets/datatables.min.css', 'utf8');
-		const js = await readFile('../assets/datatables.min.js', 'utf8');
+		let template = await readFile(__dirname + '/../assets/index.html', 'utf8');
+		const css = await readFile(__dirname + '/../assets/datatables.min.css', 'utf8');
+		const js = await readFile(__dirname + '/../assets/datatables.min.js', 'utf8');
 
 		template = template.replace("{{datatables-css}}", css);
 		template = template.replace("{{datatables-js}}", js);
