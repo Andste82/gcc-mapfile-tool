@@ -1,0 +1,31 @@
+{
+  "name": "gcc-mapfile-tool",
+  "version": "0.1.0",
+  "description": "Mapfile tool for parsing GCC mapfiles",
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/Andste82/gcc-mapfile-tool.git"
+  },
+  "main": "./src/index.js",
+  "bin": {
+    "gcc-mapfile-tool": "./src/cli.mjs"
+  },
+  "author": "Andste82",
+  "license": "MIT",
+  "keywords": [
+    "GCC",
+    "mapfile",
+    "memory layout"
+  ],
+  "tags": [
+    "mapfile",
+    "parser",
+    "pdf"
+  ],
+  "dependencies": {
+    "command-line-args": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0"
+  }
+}

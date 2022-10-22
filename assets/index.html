@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Mapfile</title>
+
+	<style>{{datatables-css}}</style>
+	<script>{{datatables-js}}</script>
+
+	<script>
+	const data = {{datatables-data}};
+
+	$(() => {
+		$('#datatable').DataTable({
+			data,
+			pageLength: 100,
+			dom: 'Bfrtip',
+			buttons: ['searchBuilder'],
+			columns: [
+				{ title: 'Memory', width: '10%' },
+				{ title: 'Section', width: '10%' },
+				{ title: 'Symbol', width: '30%' },
+				{ title: 'Origin', width: '5%' },
+				{ title: 'Length', width: '5%' },
+				{ title: 'Archive', width: '30%' },
+				{ title: 'Object', width: '10%' },
+			],
+		});
+	});
+	</script>
+
+	<style>
+	html {
+		height: 100%;
+		font-size: small;
+	}
+
+	body {
+		position: absolute;
+		top: 0.5rem;
+		bottom: 0.5rem;
+		right: 0.5rem;
+		left: 0.5rem;
+	}
+
+	table.dataTable tbody td {
+		word-break: break-word;
+		vertical-align: top;
+	}
+	</style>
+</head>
+
+<body>
+	<div>
+		<table id="datatable" class="table table-sm table-hover">
+		</table>
+	</div>
+</body>
+</html>
