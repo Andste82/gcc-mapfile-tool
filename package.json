@@ -15,12 +15,16 @@
   "keywords": [
     "GCC",
     "mapfile",
-    "memory layout"
+    "memory layout",
+    "embedded",
+    "development",
+    "maker",
+    "µController"
   ],
   "tags": [
     "mapfile",
     "parser",
-    "pdf"
+    "gcc"
   ],
   "dependencies": {
     "command-line-args": "^5.2.1"
