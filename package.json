@@ -1,6 +1,6 @@
 {
   "name": "gcc-mapfile-tool",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Mapfile tool for parsing GCC mapfiles",
   "repository": {
 	"type": "git",
@@ -30,6 +30,6 @@
     "command-line-args": "^5.2.1"
   },
   "devDependencies": {
-    "eslint": "^8.26.0"
+    "eslint": "^8.56.0"
   }
 }

@@ -92,7 +92,7 @@ export const parseMapfile = async (options) =>
 				if (line[0] === '.')
 				{
 					// check for one-line section definition ...
-					const found = line.match(/^(\S*)\s+0x(\S*)\s+0x(\S+)$/);
+					const found = line.match(/^(\S*)\s+0x(\S*)\s+0x(\S*)/);
 					if (found)
 					{
 						section = {
@@ -219,7 +219,7 @@ export const parseMapfile = async (options) =>
 				else
 				{
 					// check for second line of symbol defintion with only object info
-					const found = line.match(/^\s(\S+)\s+0x([0-9a-f]+)\s+0x([0-9a-f]+)\s+(\S+)$/);
+					const found = line.match(/^\s+0x([0-9a-f]+)\s+0x([0-9a-f]+)\s+(\S+)$/);
 					if (found)
 					{
 						const symbol = {
