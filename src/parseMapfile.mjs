@@ -25,7 +25,7 @@ export const parseMapfile = async (options) =>
 		crlfDelay: Infinity
 	});
 
-	let map = [];
+	const map = [];
 	let section;
 	let state = 0;
 	let name;
